@@ -1,7 +1,7 @@
 #!/bin/bash
 
 clear
-mkdir ~/helloWorld
+mkdir ~/Desktop/helloWorld
 echo "==========="
 echo "Hello World"
 echo "==========="
