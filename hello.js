@@ -1,6 +1,5 @@
 console.clear()
 
-const path = "~/Desktop/"
+const home = Deno.env.get("HOME")
 
-await Deno.mkdir(`${path}testJS`)
-console.log("Hello JS")
+const x = await Deno.mkdir(`${home}/Desktop/testerJS`)
