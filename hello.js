@@ -1,6 +1,6 @@
 console.clear()
 
-path = "~/Desktop/"
+const path = "~/Desktop/"
 
 await Deno.mkdir(`${path}testJS`)
 console.log("Hello JS")
