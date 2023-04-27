@@ -1,6 +1,4 @@
 
-console.clear()
-
 const url = "https://api.github.com/users/bard";
 
 const response = await fetch(url);
