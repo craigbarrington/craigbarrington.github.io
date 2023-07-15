@@ -5,7 +5,7 @@ clear
 echo "█▀▄▀█ █▀█ █▀▀   █ █▄ █ █▀▀ █▀█"
 echo "█ ▀ █ █▀█ █▄▄   █ █ ▀█ █▀  █▄█"
 
-echo "
+echo ""
 
                                                     
 CPU_MODEL=`sysctl -n machdep.cpu.brand_string`;
