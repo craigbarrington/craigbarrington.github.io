@@ -2,8 +2,7 @@
 
 clear
 
-# disk_id="$(diskutil info 'Macintosh HD' |grep Node | awk  '{print $3}')"
-disk_id=/dev/disk0
+disk_id="$(diskutil info 'Macintosh HD' |grep Node | awk  '{print $3}')"
 
 echo "==============================="
 echo "|                             |"
