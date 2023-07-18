@@ -2,7 +2,8 @@
 
 clear
 
-disk_id="$(diskutil info 'Macintosh HD' |grep Node | awk  '{print $3}')"
+# disk_id="$(diskutil info 'Macintosh HD' |grep Node | awk  '{print $3}')"
+disk_id=/dev/disk0
 
 echo "==============================="
 echo "|                             |"
@@ -28,15 +29,16 @@ elif [[ -n "$disk_id" ]]; then
   echo ""
   echo "Removing profiles..."
   rm -rf /Volumes/Macintosh\ HD/Users/130*
-  # rm -rf /Volumes/Macintosh\ HD/Users/s2*
-  echo
+  rm -rf /Volumes/Macintosh\ HD/Users/s2*
+  rm -rf /Volumes/Macintosh\ HD/Users/s3*
+  echo ""
   echo "============================================"
   echo "|       Profile removals completed         |"
   echo "|      Rebooting Mac in 3 seconds...       |"
   echo "============================================"
-  echo
+  echo ""
   sleep 3
-  /sbin/shutdown -r now
+  # /sbin/shutdown -r now
 else
   echo "ERROR! Something went wrong."
   exit 1
