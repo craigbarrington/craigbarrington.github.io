@@ -10,5 +10,5 @@ echo "ERROR! Volume not available
 exit 1
 fi
 sleep 3
-hdiutil mount http://02svrm001.scc.local/adobe.dmg
+hdiutil unmount http://02svrm001.scc.local/adobe.dmg
 exit 0
