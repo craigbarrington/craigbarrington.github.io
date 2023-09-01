@@ -9,6 +9,4 @@ else
 echo "ERROR! Volume not available"
 exit 1
 fi
-sleep 3
-hdiutil detach "/volumes/Adobe 2023"
 exit 0
