@@ -6,7 +6,7 @@ sleep 3
 if [ -d "/volumes/adobe" ]; then
   echo "connected to volume."
 else
-echo "ERROR! Volume not available
+echo "ERROR! Volume not available"
 exit 1
 fi
 sleep 3
