@@ -9,11 +9,11 @@ echo "| | |\/| |/ _  |/ __|  | ||  _ \| |_ / _ \  |"
 echo "| | |  | | (_| | (__   | || | | |  _| (_) | |"
 echo "| |_|  |_|\__,_|\___| |___|_| |_|_|  \___/  |"
 echo "|                                           |"
-echo "|         Craig Barrington © 2023           |"
+echo "|         Craig Barrington © $DATE           |"
 echo "|                                           |"
 echo " -------------------------------------------"
 
-                                                    
+DATE=`date '+%Y'`                                                   
 CPU_MODEL=`sysctl -n machdep.cpu.brand_string`;
 MODEL_ID=`sysctl -n hw.model`;
 MEMORY_SIZE=`sysctl hw.memsize | awk '{print $2 / 1024**3}'`;
