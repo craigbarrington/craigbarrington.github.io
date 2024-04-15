@@ -16,9 +16,14 @@ MODEL_ID=`sysctl -n hw.model`;
 MEMORY_SIZE=`sysctl hw.memsize | awk '{print $2 / 1024**3}'`;
 SOLID_STATE_CHECK=`diskutil info disk0 | grep "Solid State" | awk '{print $3}'`;
 DISK_SIZE=`df -H / | grep "/dev" | awk '{print $2}'`;
+if [ $DISK_SIZE == '494G' ]
+then
+DISK_SIZE='500G'
+fi
 MAC_OS_VERSION=`sw_vers -productVersion`;
 SERIAL_NUMBER=`ioreg -l | grep IOPlatformSerialNumber | awk '{print $4}' | tr -d \"`;
 IP_ADDRESS=`ipconfig getifaddr en0`;
+
 
 echo ""
 echo "==========================================="
