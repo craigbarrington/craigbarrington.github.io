@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(15, 20, 24);
+}
+
+.button1 {
+    color: white;
+    background-color: grey;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+#message {
+    color: rgb(240, 240, 240);
+    font-size: 48px;
+    text-align: center;
+    padding: 100px;
+    opacity: 50;
+}
+
+
