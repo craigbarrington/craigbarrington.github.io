@@ -1,0 +1,1 @@
+console.log("In the land of the blind, the one-eyed man is king.")

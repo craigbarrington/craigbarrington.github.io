@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(9, 9, 9);
+}
+
+#main_title {
+    color: rgb(99, 99, 99);
+    font-family: 'Times New Roman';
+    text-align: center;
+}
+
+#main_image {
+    width: 100%
+}
