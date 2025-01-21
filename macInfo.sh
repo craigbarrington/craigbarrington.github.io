@@ -13,13 +13,10 @@ echo "         Craig Barrington © `date '+%Y'`   "
                                                  
 CPU_MODEL=`sysctl -n machdep.cpu.brand_string`;
 MODEL_ID=`sysctl -n hw.model`;
+MODEL_NUMBER=`system_profiler SPHardwareDataType | grep "Model Number" | awk '{print $3}'`;
 MEMORY_SIZE=`sysctl hw.memsize | awk '{print $2 / 1024**3}'`;
 SOLID_STATE_CHECK=`diskutil info disk0 | grep "Solid State" | awk '{print $3}'`;
-DISK_SIZE=`df -H / | grep "/dev" | awk '{print $2}'`;
-if [ $DISK_SIZE == '494G' ]
-then
-DISK_SIZE='500G'
-fi
+DISK_SIZE=`diskutil info disk0 | grep "Disk Size" | awk '{print $3}'`;
 MAC_OS_VERSION=`sw_vers -productVersion`;
 SERIAL_NUMBER=`ioreg -l | grep IOPlatformSerialNumber | awk '{print $4}' | tr -d \"`;
 IP_ADDRESS=`ipconfig getifaddr en0`;
@@ -30,9 +27,10 @@ echo "==========================================="
 echo ""
 echo "CPU Model:      $CPU_MODEL"
 echo "Model ID:       $MODEL_ID"
+echo "Model Number:   $MODEL_NUMBER"
 echo "Memory:         $MEMORY_SIZE GB"
 echo "SSD Check:      $SOLID_STATE_CHECK"
-echo "Disk Size:      $DISK_SIZE"
+echo "Disk Size:      ${DISK_SIZE%.*} GB"
 echo "OS Version:     $MAC_OS_VERSION"          
 echo ""
 
@@ -43,4 +41,3 @@ echo "==========================================="
 echo ""
 
 exit 0
-
