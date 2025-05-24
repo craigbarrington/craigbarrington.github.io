@@ -12,3 +12,14 @@ body {
 #main_image {
     width: 100%
 }
+
+@media (max-width: 600px) {
+    #main_image {
+        max-width: 100% !important;
+    }
+}
+@media (min-width: 601px) {
+    #main_image {
+        max-width: 70% !important;
+    }
+}
