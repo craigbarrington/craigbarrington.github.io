@@ -9,10 +9,13 @@ CPU_MODEL="$(sysctl -n machdep.cpu.brand_string 2>/dev/null)"
 MODEL_ID="$(sysctl -n hw.model 2>/dev/null)"
 
 # Model Number (e.g., MPHH3B/A)
-MODEL_NUMBER="$(system_profiler SPHardwareDataType | grep "Model Number" | awk '{print $3}')"
+MODEL_NUMBER="$(system_profiler SPHardwareDataType 2>/dev/null | grep "Model Number" | awk '{print $3}')"
 
 # Model Name (user‑friendly)
-MODEL_NAME="$(system_profiler SPHardwareDataType | awk -F': ' '/Model Name/{print $2}')"
+MODEL_NAME="$(system_profiler SPHardwareDataType 2>/dev/null | awk -F': ' '/Model Name/{print $2}')"
+
+# Serial number (Apple‑approved method)
+SERIAL_NUMBER="$(system_profiler SPHardwareDataType 2>/dev/null | awk -F': ' '/Serial Number/{print $2}')"
 
 # Memory (in GB, properly calculated)
 MEM_BYTES="$(sysctl -n hw.memsize 2>/dev/null)"
@@ -20,9 +23,6 @@ MEMORY_SIZE="$(echo "$MEM_BYTES / 1024 / 1024 / 1024" | bc)"
 
 # macOS version
 MAC_OS_VERSION="$(sw_vers -productVersion)"
-
-# Serial number (Apple‑approved method)
-SERIAL_NUMBER="$(system_profiler SPHardwareDataType | awk -F': ' '/Serial Number/{print $2}')"
 
 # Primary disk (works on Apple Silicon + Intel)
 MAIN_DISK="$(diskutil info / | awk -F': *' '/Device Identifier/{print $2}')"
