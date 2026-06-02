@@ -1,25 +1,112 @@
+
+html {
+  overflow-y: scroll;
+}
+
 body {
-    background-color: rgb(9, 9, 9);
+  font-family: Helvetica, Arial, sans-serif;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+  line-height: 1.0;
+  color: #d9d9d9;
+  background-color: #000000;
 }
 
-#main_title {
-    color: rgb(99, 99, 99);
-    font-family: 'Times New Roman';
-    font-size: large;
+h1 { font-size: 2.0rem; margin-bottom: 0.5em; color: #d9d9d9; text-align: center; }
+p { font-size: 1.2rem; margin-bottom: 1.5em; text-align: left;}
+
+#blog_title {
+  text-align: center;
+  font-size: 1.0rem;
+  margin-bottom: 2.3em;
+  letter-spacing: 3px;
+  color: #d9d9d9;
+}
+
+#icon_image {
+max-width: 20%;
+}
+
+time {
+  font-size: 1.0rem;
+  text-align: center;
+  color: #9a9a9a;
+  margin-top: 1.0em;
+  display: block;  
+}
+
+.box1-button {
+  text-decoration: none;
+  color: #c1c1c1;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border: 1px solid #686868;
+  border-radius: 10px;    
+  transition: all 0.2s ease;
+  min-width: 100px;       
+  text-align: center;     
+  /* display: inline-block; */
+}
+
+.box1-button:hover {
+    background: #000000;
+    color: #0096FF;
+    box-shadow: 0 0 20px #0096FF;
+}
+
+.post-preview {
+  margin-top: 2.0em;
+  margin-bottom: 3.0em;
+}
+
+.blog-card {
+    border: 2px solid #0071c2; 
+    border-radius: 27px;  
+    padding: 10px 30px 40px 30px; 
+    margin-bottom: 50px; 
     text-align: center;
+    line-height: 1.6;
 }
 
-#main_image {
-    width: 100%
+.main-card {
+    border: 2px solid #0071c2; 
+    border-radius: 27px;  
+    padding: 10px 30px 10px 30px; 
+    margin-bottom: 50px; 
+    text-align: center;
+    line-height: 1.6;
 }
 
-@media (max-width: 600px) {
-    #main_image {
-        max-width: 100% !important;
-    }
+.main-card h1 {
+  font-size: 1.5rem;
+  color: #d9d9d9;
 }
-@media (min-width: 601px) {
-    #main_image {
-        max-width: 70% !important;
-    }
+
+.main-nav ul {
+  list-style-type: none; 
+  padding: 10px;
+  display: flex;         
+  justify-content: center; 
+  gap: 20px;             
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #c1c1c1;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border: 1px solid #686868;
+  border-radius: 10px;    
+  transition: all 0.2s ease;
+  min-width: 50px;       
+  text-align: center;     
+  display: inline-block;
+
+}
+
+.main-nav a:hover {
+    background: #000000;
+    color: #0096FF;
+    box-shadow: 0 0 20px #0096FF;
 }
