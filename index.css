@@ -61,7 +61,7 @@ time {
 }
 
 .blog-card {
-    border: 2px solid #0071c2; 
+    border: 1px solid #686868; 
     border-radius: 27px;  
     padding: 10px 30px 40px 30px; 
     margin-bottom: 50px; 
@@ -70,7 +70,7 @@ time {
 }
 
 .main-card {
-    border: 2px solid #0071c2; 
+    border: 1px solid #686868; 
     border-radius: 27px;  
     padding: 10px 30px 10px 30px; 
     margin-bottom: 50px; 
