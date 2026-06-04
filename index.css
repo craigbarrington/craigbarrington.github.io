@@ -9,11 +9,11 @@ body {
   margin: 30px auto;
   padding: 0 20px;
   line-height: 1.0;
-  color: #d9d9d9;
+  color: #c9c9c9;
   background-color: #000000;
 }
 
-h1 { font-size: 2.0rem; margin-bottom: 0.5em; color: #d9d9d9; text-align: center; }
+h1 { font-size: 2.0rem; margin-bottom: 0.5em; color: #c9c9c9; text-align: center; }
 p { font-size: 1.2rem; margin-bottom: 1.5em; text-align: left;}
 
 #blog_title {
@@ -21,7 +21,7 @@ p { font-size: 1.2rem; margin-bottom: 1.5em; text-align: left;}
   font-size: 1.0rem;
   margin-bottom: 2.3em;
   letter-spacing: 3px;
-  color: #d9d9d9;
+  color: #c9c9c9;
 }
 
 #icon_image {
@@ -51,7 +51,7 @@ time {
 
 .box1-button:hover {
     background: #000000;
-    color: #0096FF;
+    color: #0077ff;
     box-shadow: 0 0 20px #0096FF;
 }
 
@@ -80,7 +80,7 @@ time {
 
 .main-card h1 {
   font-size: 1.5rem;
-  color: #d9d9d9;
+  color: #c9c9c9;
 }
 
 .main-nav ul {
@@ -107,6 +107,30 @@ time {
 
 .main-nav a:hover {
     background: #000000;
-    color: #0096FF;
-    box-shadow: 0 0 20px #0096FF;
+    color: #0077ff;
+    box-shadow: 0 0 20px #0077ff;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+  margin-top: 25px;
+}
+
+.social-links a {
+  color: #868686;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.social-links a:hover {
+  color: #0077ff;
+}
+
+/* This makes the icons the same size as your text */
+.material-symbols-outlined {
+  font-size: 40px !important;
+  vertical-align: middle;
+  line-height: 1;
 }
