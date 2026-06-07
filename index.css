@@ -51,8 +51,8 @@ time {
 
 .box1-button:hover {
     background: #000000;
-    color: #0077ff;
-    box-shadow: 0 0 20px #0096FF;
+    color: #ffffff;
+    box-shadow: 0 0 20px #ffffff;
 }
 
 .post-preview {
@@ -107,8 +107,8 @@ time {
 
 .main-nav a:hover {
     background: #000000;
-    color: #0077ff;
-    box-shadow: 0 0 20px #0077ff;
+    color: #ffffff;
+    box-shadow: 0 0 20px #ffffff;
 }
 
 .social-links {
@@ -125,7 +125,7 @@ time {
 }
 
 .social-links a:hover {
-  color: #0077ff;
+  color: #ffffff;
 }
 
 /* This makes the icons the same size as your text */
